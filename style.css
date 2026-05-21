@@ -1,0 +1,123 @@
+* {
+    display: border-box;
+}
+
+:root {
+    --bg: #F2EAE2;
+    --text: #6C7289;
+    --cost: #3D8168;
+    --active-cost: #1A4032; 
+}
+
+body {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+picture img {
+    border-radius: 21px 0px 0px 21px;
+    height: 648px;
+    width: 342px;
+}
+
+.info-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem;
+    border-radius: 0 21px 21px 0px;
+    width: 17rem;
+    height: 36rem;
+}
+
+.info-card h1 {
+    color: var(--text);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .75rem;
+    letter-spacing: .5rem;
+}
+
+.info-card h2 {
+    font-family: Fraunces;
+    font-size: 2.5rem;
+
+}
+
+.info-card p {
+    color: var(--text);
+    line-height: 150%;
+    font-size: 1rem;
+    line-height: 160%;
+}
+
+.cost {
+    display: flex;
+    gap: 1rem;
+}
+
+.cost h3 {
+    color: var(--cost);
+    font-family: Fraunces;
+    font-size: 2.5rem;
+}
+
+.cost p {
+    align-content: center;
+    text-decoration: line-through;
+}
+
+button {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: .1rem;
+    background-color: var(--cost);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button img {
+    padding: 0 .8rem;
+    vertical-align: text-top;
+    width: 1.05rem;
+}
+
+button:hover {
+    transform: scale(1.025);
+}
+
+button:focus {
+    border: 4px dotted white;
+}
+
+button:active {
+    background-color: var(--active-cost);
+}
+
+@media (max-width: 48em) {
+    .container {
+    flex-direction: column;    
+    }
+    .info-card {
+        border-radius: 0 0 21px 21px;
+        box-shadow: 0px -3px white;
+        z-index: 0;
+    }
+    picture img {
+        height: 22rem;
+        border-radius: 21px 21px 0 0;
+    }
+}
