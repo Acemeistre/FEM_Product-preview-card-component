@@ -1,5 +1,5 @@
 * {
-    display: border-box;
+    box-sizing: border-box;
 }
 
 :root {
@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,9 +25,9 @@ body {
 }
 
 picture img {
-    border-radius: 21px 0px 0px 21px;
-    height: 648px;
-    width: 342px;
+    border-radius: 0.6rem 0px 0px 0.6rem;
+    height: 654px;
+    width: 320px;
 }
 
 .info-card {
@@ -35,9 +35,9 @@ picture img {
     display: flex;
     flex-direction: column;
     padding: 2.25rem;
-    border-radius: 0 21px 21px 0px;
-    width: 17rem;
-    height: 36rem;
+    border-radius: 0 0.6rem 0.6rem 0px;
+    width: 320px;
+    height: 654px;  
 }
 
 .info-card h1 {
@@ -49,16 +49,15 @@ picture img {
 }
 
 .info-card h2 {
-    font-family: Fraunces;
+    font-family: Fraunces, serif;
     font-size: 2.5rem;
 
 }
 
 .info-card p {
     color: var(--text);
-    line-height: 150%;
-    font-size: 1rem;
     line-height: 160%;
+    font-size: 1rem;
 }
 
 .cost {
@@ -68,7 +67,7 @@ picture img {
 
 .cost h3 {
     color: var(--cost);
-    font-family: Fraunces;
+    font-family: Fraunces, serif;
     font-size: 2.5rem;
 }
 
@@ -78,19 +77,19 @@ picture img {
 }
 
 button {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-size: 1rem;
     margin-top: .1rem;
     background-color: var(--cost);
     color: white;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
 button img {
-    padding: 0 .8rem;
+    margin: 0 .8rem;
     vertical-align: text-top;
     width: 1.05rem;
 }
@@ -99,7 +98,7 @@ button:hover {
     transform: scale(1.025);
 }
 
-button:focus {
+button:focus-visible {
     border: 4px dotted white;
 }
 
@@ -112,12 +111,11 @@ button:active {
     flex-direction: column;    
     }
     .info-card {
-        border-radius: 0 0 21px 21px;
+        border-radius: 0 0 0.6rem 0.6rem;
         box-shadow: 0px -3px white;
-        z-index: 0;
     }
     picture img {
         height: 22rem;
-        border-radius: 21px 21px 0 0;
+        border-radius: 0.6rem 0.6rem 0 0;
     }
 }
