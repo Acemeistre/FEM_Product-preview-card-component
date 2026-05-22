@@ -109,7 +109,7 @@ button:hover {
 }
 
 button:focus-visible {
-    box-shadow: white;
+    outline: red solid 3px;
 }
 
 button:active {
