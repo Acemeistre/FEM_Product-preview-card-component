@@ -22,12 +22,21 @@ body {
     display: flex;
     justify-content: center;
     margin: 2rem;
+    max-width: 40rem; /* control container size*/
+    width: 100%;
+}
+
+picture {
+    flex: 1; /* controls the amount of flex when twinned with the same property on the adjacent card, allowing the coder to control shared space within the same container. */
+    min-width: 0;
 }
 
 picture img {
     border-radius: 0.6rem 0 0 0.6rem;
-    height: 654px;
-    width: 320px;
+    height: 100%;
+    width: 100%; /* fills the picture element's height */
+    object-fit: cover; /* maintains aspect ration without distortion */
+    display: block; /* removes the inline image gap */
 }
 
 .info-card {
@@ -36,8 +45,9 @@ picture img {
     flex-direction: column;
     padding: 2.25rem;
     border-radius: 0 0.6rem 0.6rem 0;
-    width: 320px;
-    height: 654px;  
+    flex: .75;
+    min-width: 0;
+      
 }
 
 .info-card h1 {
@@ -99,7 +109,7 @@ button:hover {
 }
 
 button:focus-visible {
-    border: 4px dotted white;
+    box-shadow: white;
 }
 
 button:active {
@@ -108,14 +118,17 @@ button:active {
 
 @media (max-width: 48em) {
     .container {
-    flex-direction: column;    
+        flex-direction: column;
+        margin: 0;    
     }
     .info-card {
         border-radius: 0 0 0.6rem 0.6rem;
-        box-shadow: 0px -3px white;
+        width: 100%;
     }
-    picture img {
-        height: 22rem;
+    picture img {     
         border-radius: 0.6rem 0.6rem 0 0;
+    }
+    picture {
+       width: 100%;
     }
 }
